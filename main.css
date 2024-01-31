@@ -76,4 +76,10 @@ main {
   border-radius: 5px;
   padding: 10px 15px;
   font-size: 18px;
+}
+.row--btn button:hover {
+  cursor: pointer;
+  background: white;
+  color: rgb(255, 153, 0);
+  transition-duration: 0.4s;
 }/*# sourceMappingURL=main.css.map */

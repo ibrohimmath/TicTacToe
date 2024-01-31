@@ -74,9 +74,11 @@ function checkDiag() {
 // Assign the winner of the game 
 function announceWinner(result) {
     if (result == 1) {
+        turn.style.color = "rgb(23,215,23)";
         turn.textContent = "Game over! Player2 has won the game";
         secondPlayerScore++;
     } else {
+        turn.style.color = "rgb(23,215,23)";
         turn.textContent = "Game over! Player1 has won the game";            
         firstPlayerScore++;
     }
@@ -118,8 +120,12 @@ for (const item of slot) {
                 }
                 item.innerHTML = content;
                 counter++;
-            } else {
+            } 
+            if (counter == 9) {
                 full = true;
+                ok = true;
+                turn.textContent = "Draw!";
+                turn.style.color = "rgb(144,0,255)";                
             }
             if (check()) ok = true;
         }
@@ -131,6 +137,7 @@ restart.addEventListener("click", function() {
         item.innerHTML = "";
     }
     counter = 0;
+    turn.style.color = "white";
     turn.textContent = "It's Player1's turn!";
     ok = false;
 });
@@ -140,11 +147,10 @@ reset.addEventListener("click", function() {
         item.innerHTML = "";
     }
     counter = 0;
+    turn.style.color = "white";
     turn.textContent = "It's Player1's turn!";
-    firstPlayerScore = 0;    
-    secondPlayerScore = 0;    
-    score1.textContent = firstPlayerScore;
-    score2.textContent = secondPlayerScore;
+    score1.textContent = firstPlayerScore = 0;    
+    score2.textContent = secondPlayerScore = 0;
     ok = false;
 });
 
