@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 55, 0);
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerturn {
+  margin-top: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.slots {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0;
+}
+.slots .slot {
+  max-width: 150px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkblue;
+  font-size: 100px;
+}
+.slots .top-border {
+  border-top: 5px solid darkblue;
+}
+.slots .right-border {
+  border-right: 5px solid darkblue;
+}
+.slots .bottom-border {
+  border-bottom: 5px solid darkblue;
+}
+.slots .left-border {
+  border-bottom: 5px solid darkblue;
+}
+
+.row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 350px;
+  color: white;
+  font-weight: bold;
+}
+.row .col {
+  text-align: center;
+  line-height: 30px;
+}
+.row--btn {
+  margin-top: 15px;
+  display: flex;
+  gap: 50px;
+}
+.row--btn button {
+  background-color: rgb(255, 153, 0);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+}/*# sourceMappingURL=main.css.map */
